@@ -482,12 +482,12 @@ function spawnGoblin() {
         e.stopPropagation();
         killGoblin(goblin);
     });
-    // Обработчик для сенсорных экранов
+      // Обработчик для сенсорных экранов
     goblin.addEventListener("touchstart", (e) => {
         e.preventDefault();       // предотвращает эмуляцию click и зум
         e.stopPropagation();
         killGoblin(goblin);
-    }, { p
+    }, { passive: false });
     goblinContainer.appendChild(goblin);
     const speed = 1.5;
     goblins.push({ element: goblin, x, y, speed });
