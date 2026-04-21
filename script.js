@@ -482,6 +482,12 @@ function spawnGoblin() {
         e.stopPropagation();
         killGoblin(goblin);
     });
+    // Обработчик для сенсорных экранов
+    goblin.addEventListener("touchstart", (e) => {
+        e.preventDefault();       // предотвращает эмуляцию click и зум
+        e.stopPropagation();
+        killGoblin(goblin);
+    }, { p
     goblinContainer.appendChild(goblin);
     const speed = 1.5;
     goblins.push({ element: goblin, x, y, speed });
@@ -667,7 +673,7 @@ function endGame() {
         <h1>Тест завершён</h1>
         <p>Баллы: ${score}</p>
         <p>Оценка: ${grade}</p>
-        ${gameOverReason === "goblin" ? "<p>Гоблин добрался до коробки!</p>" : ""}
+        ${gameOverReason === "goblin" ? "<p>Зомби добрался до коробки!</p>" : ""}
     `;
     bgMusic.pause();
     musicPlaying = false;
