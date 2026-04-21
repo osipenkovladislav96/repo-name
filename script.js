@@ -687,3 +687,11 @@ window.addEventListener("load", () => {
         updateScore();
     }
 });
+// Дополнительный обработчик для сенсорного клика по коробке
+const boxElement = document.querySelector(".box");
+if (boxElement) {
+    boxElement.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        clickBox();
+    }, { passive: false });
+}
