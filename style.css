@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'GameBoy';
+    src: url('fonts/GameBoy.otf') format('opentype');
+}
+body {
+    font-family:'Gameboy';
+    background: #111;
+    color: white;
+    text-align: center;
+}
+h2{
+    text-align: left;
+    margin: 50px;
+}
+.container, .game-container, .shop-container {
+    margin-top: 10px;
+}
+
+button {
+    font-family:'Gameboy';
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 25px;
+    background-color: #228B22;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+}
+span{
+    margin-left: 65px;
+    font-family:'Gameboy';
+}
+
+.box {
+    font-size: 100px;
+    cursor: pointer;
+    margin: 30px;
+    transition: 0.2s;
+    
+
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 0.3s ease;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+h4{
+    text-align: left;
+
+}
+#question-block button {
+    display: block;
+    margin: 10px auto;
+}
+/* Кнопка музыки */
+#toggle-music {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    font-family: 'GameBoy';
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: 1px solid #228B22;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Гоблины */
+#goblins-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 500;
+}
+
+.goblin {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    content: "🧟";
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: transform 0.1s;
+    z-index: 501;
+}
+
+.goblin:hover {
+    transform: scale(1.1);
+}

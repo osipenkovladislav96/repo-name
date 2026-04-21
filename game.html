@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Музыка -->
+<audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+<button id="toggle-music">🔊 Выкл. музыку</button>
+
+<div class="game-container">
+    <h1>questBox</h1>
+    <h2><img src="points.gif" width="48px"></h2>
+    <h4><span id="score">0</span></h4>
+
+    <div class="box" onclick="clickBox()">
+        <img src="box.png" id="box-img">
+    </div>
+
+    <div id="question-block" class="hidden">
+        <h3 id="question"></h3>
+        <div id="options"></div>
+        <p id="timer"></p>
+        <button id="reroll-btn" class="hidden" onclick="rerollQuestion()">
+            Обменять вопрос (1.5)
+        </button>
+        <button onclick="buyTimeInGame()">
+            +5 секунд (2)
+        </button>
+    </div>
+</div>
+
+<!-- Контейнер для гоблинов -->
+<div id="goblins-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
